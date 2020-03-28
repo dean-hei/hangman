@@ -83,7 +83,7 @@ def turn(guess_left):
         guess = input("Your next guess: ")
         guess = guess.lower()
         # if it's not a letter then restart
-        if not guess in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ":
+        if not guess in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" or len(guess) > 1:
             print("You need to type a letter. Please try again.")
             turn(guess_left)
         # if the guessed letter is in the secret word
